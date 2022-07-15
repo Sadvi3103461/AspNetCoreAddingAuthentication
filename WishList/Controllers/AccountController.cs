@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace WishList.Controllers
 {
     [Authorize]
-    public class AccountController1 : Controller
+    public class AccountController : Controller
     {
         public IActionResult Index()
         {
