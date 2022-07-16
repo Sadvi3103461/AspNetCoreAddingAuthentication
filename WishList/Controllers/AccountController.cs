@@ -99,6 +99,7 @@ namespace WishList.Controllers
 
         [HttpPost]
         [AllowAnonymous]
+        [ValidateAntiForgeryToken]
         public IActionResult Logout()
         {
             _signInManager.SignOutAsync();
