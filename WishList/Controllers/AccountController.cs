@@ -78,7 +78,7 @@ namespace WishList.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Login(LoginViewModel loginViewModel)
         {
-            return RedirectToAction ("Item.Index" , "Home")
+            return RedirectToAction("Item.Index", "Home");
         }
 
 
