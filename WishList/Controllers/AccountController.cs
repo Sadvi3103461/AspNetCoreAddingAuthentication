@@ -97,7 +97,7 @@ namespace WishList.Controllers
 
 
 
-        [HttpGet]
+        [HttpPost]
         [AllowAnonymous]
         public IActionResult Logout()
         {
