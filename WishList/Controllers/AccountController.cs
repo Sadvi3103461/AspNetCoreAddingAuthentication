@@ -91,7 +91,7 @@ namespace WishList.Controllers
                 return View(loginViewModel);
             }
 
-            return RedirectToAction("Item.Index", "Home");
+            return RedirectToAction("Index", "Item");
         }
 
 
