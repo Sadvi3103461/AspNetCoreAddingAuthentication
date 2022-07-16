@@ -53,12 +53,33 @@ namespace WishList.Controllers
 
             }
 
-
             return RedirectToAction  ("Index" ,"Home");
         }
 
-       
 
+
+
+
+
+
+
+
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult Login() 
+        { return View(); }
+
+
+
+
+
+        [HttpGet]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public IActionResult Login(LoginViewModel loginViewModel)
+        {
+            return RedirectToAction ("Item.Index" , "Home")
+        }
 
 
 
