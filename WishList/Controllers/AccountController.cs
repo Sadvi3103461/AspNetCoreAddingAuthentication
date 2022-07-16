@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using WishList.Models;
+using WishList.Models.AccountViewModels;
 
 namespace WishList.Controllers
 {
@@ -18,9 +19,30 @@ namespace WishList.Controllers
             _signInManager = signInManager;
 
         }
-        public IActionResult Index()
+
+        [HttpGet]
+        [AllowAnonymous]
+
+        public IActionResult Register()
         {
             return View();
         }
+
+
+
+        [HttpPost]
+        [AllowAnonymous]
+
+        public IActionResult Register( RegisterViewModel registerViewModel)
+        {
+            return  RedirectToAction  ("Index" ,"Home");
+        }
+
+
+
+
+
+
+
     }
 }
